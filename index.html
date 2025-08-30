@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobiletix</title>
+<link rel="stylesheet" href="style.css">
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo">Mobiletix</div>
+  <div class="nav">
+    <span id="userName"></span>
+    <button id="signupBtn">Signup</button>
+    <button id="loginBtn">Login</button>
+  </div>
+</header>
+
+<section id="banner">
+  <img src="banner.jpg" alt="Banner">
+</section>
+
+<section class="products" id="productList"></section>
+
+<!-- Modal -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <h2 id="modalName"></h2>
+    <p id="modalDetails"></p>
+    <h3 id="modalPrice"></h3>
+    <p>স্টকে: <span id="modalQuantity"></span></p>
+    <p>⭐ <span id="modalRating"></span></p>
+    <p>👥 কিনেছে/পছন্দ করেছে: <span id="modalBought"></span></p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/8801976440597" class="whatsapp">WhatsApp</a>
+      <a href="https://www.facebook.com/share/178ceUFtoA/" class="facebook">Facebook</a>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
